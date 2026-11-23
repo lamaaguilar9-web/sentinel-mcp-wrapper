@@ -1,0 +1,22 @@
+{
+  "title": "Sentinel Fleet DeFi MCP Server Input",
+  "description": "Optional configuration when starting the Sentinel Fleet MCP server in Standby or single-run inspection mode.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "gatewayUrl": {
+      "title": "Upstream Gateway URL",
+      "type": "string",
+      "description": "Base URL of the Sentinel Fleet Universal Gateway.",
+      "default": "https://api.sentinelfleet.tech",
+      "editor": "textfield"
+    },
+    "poolAddress": {
+      "title": "Target Pool or Vault Address (optional)",
+      "type": "string",
+      "description": "Optional Base Mainnet EVM contract address (0x...) to inspect when invoking tools.",
+      "editor": "textfield"
+    }
+  },
+  "required": []
+}

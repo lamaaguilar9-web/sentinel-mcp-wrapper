@@ -8,6 +8,8 @@
     "templateId": "python-mcp-server"
   },
   "dockerfile": "../Dockerfile",
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
   "usesStandbyMode": true,
   "webServerMcpPath": "/mcp"
 }

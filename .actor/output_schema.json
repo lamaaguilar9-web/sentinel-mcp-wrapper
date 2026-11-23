@@ -1,0 +1,11 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Sentinel Fleet MCP Output",
+  "properties": {
+    "results": {
+      "type": "string",
+      "title": "Security Scan Results",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    }
+  }
+}
