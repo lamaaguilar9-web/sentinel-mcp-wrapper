@@ -1,0 +1,13 @@
+{
+  "actorSpecification": 1,
+  "name": "sentinel-fleet-defi-mcp",
+  "title": "Sentinel Fleet — DeFi Security & Invariant MCP Server",
+  "description": "Lightweight MCP wrapper for Sentinel Fleet Technologies Base Mainnet DeFi security tools (AMM invariant scan, oracle divergence circuit breaker, vault solvency forensics, flashloan anomaly telemetry).",
+  "version": "1.0",
+  "meta": {
+    "templateId": "python-mcp-server"
+  },
+  "dockerfile": "../Dockerfile",
+  "usesStandbyMode": true,
+  "webServerMcpPath": "/mcp"
+}

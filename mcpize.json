@@ -1,0 +1,26 @@
+{
+  "name": "sentinel-fleet-defi-mcp",
+  "version": "1.0.0",
+  "description": "Sentinel Fleet Technologies DeFi Security & Invariant MCP Server (Base Mainnet).",
+  "runtime": "docker",
+  "dockerfile": "Dockerfile",
+  "port": 8080,
+  "transport": "streamable-http",
+  "endpoints": {
+    "mcp": "/mcp",
+    "sse": "/sse",
+    "health": "/health"
+  },
+  "env": {
+    "SENTINEL_GATEWAY_URL": {
+      "description": "Upstream Sentinel Fleet gateway URL",
+      "default": "https://api.sentinelfleet.tech",
+      "required": false
+    },
+    "SENTINEL_API_KEY": {
+      "description": "Internal subscriber/platform Bearer key for Sentinel Fleet gateway",
+      "required": true,
+      "secret": true
+    }
+  }
+}
