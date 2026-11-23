@@ -11,6 +11,7 @@ from typing import Any, Dict, Optional
 
 import httpx
 from mcp.server.fastmcp import FastMCP
+from mcp.server.transport_security import TransportSecuritySettings
 from starlette.responses import JSONResponse
 from starlette.routing import Route
 import uvicorn
@@ -19,7 +20,11 @@ GATEWAY_URL = os.environ.get("SENTINEL_GATEWAY_URL", "https://api.sentinelfleet.
 API_KEY = os.environ.get("SENTINEL_API_KEY", "").strip()
 PORT = int(os.environ.get("APIFY_CONTAINER_PORT") or os.environ.get("PORT") or "8080")
 
-mcp = FastMCP("sentinel-fleet-defi-mcp", stateless_http=True)
+mcp = FastMCP(
+    "sentinel-fleet-defi-mcp",
+    stateless_http=True,
+    transport_security=TransportSecuritySettings(enable_dns_rebinding_protection=False),
+)
 
 
 async def _call_gateway(tool_name: str, payload: Dict[str, Any]) -> str:
