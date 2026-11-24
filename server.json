@@ -2,9 +2,15 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.lamaaguilar9-web/sentinel-mcp-wrapper",
   "title": "Sentinel Fleet MCP",
-  "description": "DeFi invariant scanner, oracle circuit breaker, and forensic scoring MCP server via x402.",
-  "version": "2.2.0",
+  "description": "DeFi invariant scanner, oracle circuit breaker & forensic scoring MCP via x402.",
+  "version": "2.2.1",
   "websiteUrl": "https://sentinelfleet.tech",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/lamaaguilar9-web/arbitrum-nitro-guardian/main/logo.jpg",
+      "mimeType": "image/jpeg"
+    }
+  ],
   "repository": {
     "url": "https://github.com/lamaaguilar9-web/sentinel-mcp-wrapper",
     "source": "github"
