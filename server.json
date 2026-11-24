@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.lamaaguilar9-web/sentinel-mcp-wrapper",
+  "title": "Sentinel Fleet MCP",
+  "description": "DeFi invariant scanner, oracle circuit breaker, and forensic scoring MCP server via x402.",
+  "version": "2.2.0",
+  "websiteUrl": "https://sentinelfleet.tech",
+  "repository": {
+    "url": "https://github.com/lamaaguilar9-web/sentinel-mcp-wrapper",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.sentinelfleet.tech/mcp",
+      "headers": [
+        {
+          "name": "PAYMENT-SIGNATURE",
+          "description": "x402 v2 payment signature header (optional for free/402 discovery)",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}
